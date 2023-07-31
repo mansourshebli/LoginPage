@@ -1,11 +1,15 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: linear-gradient(to right, #F2A1A1, #D98282); /* Gradient background effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
     max-width: 400px;
-    margin: 100px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
@@ -14,6 +18,7 @@ body {
 
 h2 {
     text-align: center;
+    color: #333;
 }
 
 label,
@@ -31,6 +36,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
 }
 
 button:hover {
