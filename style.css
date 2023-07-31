@@ -1,17 +1,37 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #F2A1A1, #D98282); /* Gradient background effect */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(to right, #0069ff, #00ffcc);
+    animation: animateBackground 10s linear infinite;
+}
+
+@keyframes animateBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 400px;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -19,6 +39,7 @@ body {
 h2 {
     text-align: center;
     color: #333;
+    margin-bottom: 20px;
 }
 
 label,
@@ -30,17 +51,17 @@ button {
 }
 
 button {
-    padding: 10px;
-    background-color: #007BFF;
+    padding: 12px;
+    background-color: #00cc66;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition effect */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #00b359;
 }
 
 #message {
